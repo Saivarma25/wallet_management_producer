@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: WalletAPI
+
+  redis:
+    host: 172.21.123.22
+    port: 6379
+
+  kafka:
+    bootstrap-servers: 172.21.123.22:9092
+    consumer:
+      group-id: WalletAPI
+
+wallet:
+  sync:
+    delay: PT10M
+  app:
+    token: ${WALLET_APP_TOKEN}
