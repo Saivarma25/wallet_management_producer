@@ -2,9 +2,11 @@ spring:
   application:
     name: WalletAPI
 
-  redis:
-    host: 172.21.123.22
-    port: 6379
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      password: ${REDIS_PASSWORD}
 
   kafka:
     bootstrap-servers: 172.21.123.22:9092
